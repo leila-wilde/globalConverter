@@ -21,29 +21,27 @@ A Java console application that allows users to convert text strings into variou
 - **Custom Conversion Logic**: Manual conversion routines are implemented for each base without relying on built-in Java methods.
 - **Caesar Cipher**: A simple encryption algorithm is implemented for reversible data transformation.
 
-## 🚀 How to Compile & Use
+## 🚀 How to compile & use
 1. Clone the repository
 2. Ensure you have Java installed and properly configured in your environment to run the application.
-3. Create an output directory
-From globalConverter/ run:
+3. Create an output directory From `globalConverter/` run:
 ```bash
 mkdir -p out
 ```
-4. Compile all `.java`files: 
-From globalConverter/ run:
+4. Compile all `.java`files and from `GlobalConverter/` run:
 ``` bash
 javac -d out $(find src/main -name "*.java")
 ```
-4. Copy the resource bundles
+4. Copy the resource bundles:
 ``` bash
 cp src/resources/messages_*.properties out/
 
 ```
-5. Run GlobalConverter application
+5. Run GlobalConverter application:
 ``` bash
 java -cp out GlobalConverter -h "Hello world"
 ```
-3. Optionally, encryption using caesar cipher by specifying a key using `-k` or `key` followed an valid integer. 
+3. Optionally, encryption using caesar cipher by using `-e` and specifying a valid integer as a key. 
 
 4. The application will validate the input and display the converted output.
 
@@ -55,14 +53,14 @@ mkdir -p out \
   && java -cp out GlobalConverter -h "Hello world"
 ```
 
-### Future upgrades
+## 📌 Future upgrades
 - **additional encryption algorithms**: possibility to specify an encryption action `-a` and choice of cipher such as `"caesar"` before the key
-- **additional languages**
+- **additional language support**
 
 ## 📋 Sample Conversions
 - Convert to hexadecimal:
 ``` bash
-java GlobalConverter -h "Hello world"
+java -cp out GlobalConverter -h "Hello world"
 48 65 6C 6C 6F 20 57 6F 72 6C 64
 ```
 - Convert to binary:
@@ -70,7 +68,7 @@ java GlobalConverter -h "Hello world"
 java -cp out GlobalConverter -b "Hello World"
 Result: 01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100
 ```
-- - Convert to decimal:
+- Convert to decimal:
 ``` bash
 java -cp out GlobalConverter octal "Hello World"
 Result: 110 145 154 154 157 040 127 157 162 154 144

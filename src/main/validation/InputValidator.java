@@ -16,8 +16,7 @@ public final class InputValidator {
       throw new IllegalArgumentException("Input cannot be empty");
     }
     if (!StringUtils.isAlphanumericSpace(text)) {
-      throw new IllegalArgumentException(
-        "Only alphanumeric characters and spaces are allowed");
+      throw new IllegalArgumentException("Only alphanumeric characters and spaces are allowed");
     }
   }
 
